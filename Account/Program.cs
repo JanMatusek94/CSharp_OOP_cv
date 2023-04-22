@@ -10,11 +10,11 @@
         //Account5.Account.Mainx();
         //Account6.Account.Mainx();
         //Account7.Account.Mainx();
-        Account8.Account.Mainx();
+        //Account8.Account.Mainx();
         //Account9.Account.Mainx();
-        //Account10.Account.Mainx();
-        //Account11.Account.Mainx();
-        //UcetVlastni9.Account.Mainx();
-        //UcetVlastni11.Account.Mainx();
+        Account10.Account.Mainx();
+        Account11.Account.Mainx();
+        UcetVlastni9.Account.Mainx();
+        UcetVlastni11.Account.Mainx();
     }
 }

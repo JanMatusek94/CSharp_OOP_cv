@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Account\\Account.csproj": {}
+    "C:\\Users\\ACER\\source\\repos\\CSharp_OOP_cv\\Account\\Account.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Account\\Account.csproj": {
+    "C:\\Users\\ACER\\source\\repos\\CSharp_OOP_cv\\Account\\Account.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Account\\Account.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\CSharp_OOP_cv\\Account\\Account.csproj",
         "projectName": "Account",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Account\\Account.csproj",
+        "projectPath": "C:\\Users\\ACER\\source\\repos\\CSharp_OOP_cv\\Account\\Account.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Account\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\source\\repos\\CSharp_OOP_cv\\Account\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
