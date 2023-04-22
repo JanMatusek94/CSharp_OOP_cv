@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Prvni/1.0.0": {
+        "dependencies": {
+          "Rozhrani": "1.0.0"
+        },
+        "runtime": {
+          "Prvni.dll": {}
+        }
+      },
+      "Rozhrani/1.0.0": {
+        "runtime": {
+          "Rozhrani.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Prvni/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rozhrani/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
