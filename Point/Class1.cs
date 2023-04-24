@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Point1 {
 	class Point {
-		public double x;
-		public double y;
+		private double x;
+		private double y;
 		public Point(double x, double y) {
 			this.x = x;
 			this.y = y;
@@ -19,6 +19,7 @@ namespace Point1 {
 
 	class Shape {
 		public Point center;
+
 		public Shape(Point center) {
 			this.center = center;
 		}
@@ -30,49 +31,41 @@ namespace Point1 {
 		}
 	}
 
-	class Circle {
-		public Point center;
-		public int r;
-		public Circle(Point center, int r) {
-			this.center = center;
+	class Circle : Shape {
+		public double r;
+		public Circle(Point center, int r) : base(center){
 			this.r = r;
 		}
-		public Circle(int r) {
+		public Circle(int r) : base(new Point(0,0)){
 			this.r = r;
-			center = new Point(0, 0);
 		}
-		public Circle(double x, double y, double r) {
-			this.r = (int)r;
-			center = new Point(x, y);
+		public Circle(double x, double y, double r) : base(new Point(x,y)) {
+			this.r = r;
 		}
 		public override string ToString() {
 			return $"Kruh s poloměrem {r} a středem: {center}";
 		}
 	}
 
-	class Rectangle {
-		public Point center;
+	class Rectangle : Shape {
+		//public Point center;
 		public int a;
 		public int b;
-		public Rectangle(Point center, int a, int b) {
-			this.center = center;
+		public Rectangle(Point center, int a, int b) : base(center) {
 			this.a = a;
 			this.b = b;
 		}
-		public Rectangle(int a, int b) {
+		public Rectangle(int a, int b) : base (new Point(0,0)){
 			this.a = a;
 			this.b = b;
-			center = new Point(0, 0);
 		}
-		public Rectangle(Point center, int a) {
-			this.center = center;
+		public Rectangle(Point center, int a) : base(center){
 			this.a = a;
 			b = a;
 		}
-		public Rectangle(int a) {
+		public Rectangle(int a) : base(new Point(0,0)){
 			this.a = a;
 			b = a;
-			center = new Point(0, 0);
 		}
 		public override string ToString() {
 			return $"Obdélník se stranami 'a' a 'b': [{a},{b}] a středem: {center}";
@@ -101,6 +94,6 @@ namespace Point1 {
 			Console.WriteLine(obd2);
 			Console.WriteLine(obd3);
 			Console.WriteLine(obd4);
-		}
+        }
 	}
 }
