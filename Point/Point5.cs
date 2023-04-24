@@ -44,9 +44,7 @@ namespace Point5 {
     class Circle : Shape {
         public double r;
         public Circle(Point center, double r) : base(center) {
-                if (r > 0) {
-                    this.r = r;
-                } else {
+                if (r < 0) {
                     throw new Zapornahodnota("Zaporna hodnota polomeru kruhu");
             }
         }
@@ -74,7 +72,7 @@ namespace Point5 {
         public int a;
         public int b;
         public Rectangle(Point center, int a, int b) : base(center) {
-            if (a > 0 && b > 0) {
+            if (a > 0 || b > 0) {
                 this.a = a;
                 this.b = b;
             } else {
