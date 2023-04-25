@@ -44,9 +44,10 @@ namespace Point5 {
     class Circle : Shape {
         public double r;
         public Circle(Point center, double r) : base(center) {
-                if (r < 0) {
-                    throw new Zapornahodnota("Zaporna hodnota polomeru kruhu");
-            }
+      if (r < 0) {
+        throw new Zapornahodnota("Zaporna hodnota polomeru kruhu");
+      }
+      else { this.r = r; }
         }
         public Circle(double r) : this(new Point(0, 0), r) {
         }
@@ -105,30 +106,44 @@ namespace Point5 {
 
     class TestPoint {
         public static void Mainx() {
+      Point bod1 = new Point(3.621, 9.451);
+      Point bod2 = new Point(4.694, 5.947);
             bool ok;
             double polomer;
             int stranaA;
             int stranaB;
-            do {
+			bool parseA;
+			bool parseB;
+			do {
                 ok = false;
                 try {
                     Console.WriteLine("Napiš poloměr kroužku");
                     polomer = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Napiš stranu a");
-                    Int32.TryParse(Console.ReadLine(), out stranaA);
-                    Console.WriteLine("Napiš stranu b");
-                    Int32.TryParse(Console.ReadLine(), out stranaB);
-                    Circle kruh1 = new Circle(polomer);
-                    Rectangle rec1 = new Rectangle(stranaA, stranaB);
+                    Circle kruh1 = new Circle(bod1,polomer);
                     Console.WriteLine(kruh1);
-                    Console.WriteLine(rec1);
                 }
                 catch (FormatException e) { Console.WriteLine(e.Message); ok = true; }
                 catch (Zapornahodnota e) { Console.WriteLine(e.Message); ok = true; }
-
             } while (ok);
+
+      do {
+        ok = true;
+        Console.WriteLine("Napiš stranu a");
+        parseA = Int32.TryParse(Console.ReadLine(), out stranaA);
+        Console.WriteLine("Napiš stranu b");
+        parseB = Int32.TryParse(Console.ReadLine(), out stranaB);
+
+        if ((!parseA && stranaA == 0) || (!parseB && stranaB == 0)) {
+          Console.WriteLine("Zadej znovu");
         }
-    }
+        else {
+          ok = false;
+          Rectangle rec1 = new Rectangle(bod2, stranaA, stranaB);
+          Console.WriteLine(rec1);
+        }
+      } while (ok);
+		}
+  }
 }
 
 

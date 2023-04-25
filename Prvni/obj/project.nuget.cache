@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "9shK3Rgc5doHqSMS++Tne+pdckln1KM++VwghL7wmG1p1ZmeTQ+G4gn3tx1De/AQOHvRKvtzYsYBpzHItHTabA==",
+  "dgSpecHash": "y4lY2eNh4/4SW1FA9WXsM/kRPLHbJwWcaXyWclY4Ho/4BtZrL/ZJr513asLyFruvG2c6Sde4p6EleTsW3U3cuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cvGit\\Prvni\\Prvni.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Prvni\\Prvni.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Prvni\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
