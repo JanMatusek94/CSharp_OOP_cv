@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L/K3f6G4lyk7vcvEeqVb0ETvlgMQlUKuFwRCFtzx0wbE0Xt/NcVx8I02LHnbX6/gML3De/NZzLaDaantLOtXcw==",
+  "dgSpecHash": "AVXgEEIBWWfhckT/bTP5vtPSbF+UMK9kmGaK0yCJeH14DmCkjVKC205M0OwdOG2meTxJ1afvHcLrSK9pwWfqZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Rozhrani\\Rozhrani.csproj",
+  "projectFilePath": "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\Rozhrani\\Rozhrani.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\Rozhrani\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

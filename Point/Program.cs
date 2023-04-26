@@ -7,6 +7,8 @@ class Program {
 		//Point4.TestPoint.Mainx();
 		//Point5.TestPoint.Mainx();
 		//Point6.TestPoint.Mainx();
-		Point7.TestPoint.Mainx();
+		//Point7.TestPoint.Mainx();
+		//Point8.TestPoint.Mainx();
+		Point9.TestPoint.Mainx();
 	}
 }

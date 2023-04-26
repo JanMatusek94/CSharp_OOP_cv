@@ -1,0 +1,15 @@
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.csproj.AssemblyReference.cache
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.AssemblyInfoInputs.cache
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.AssemblyInfo.cs
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.csproj.CoreCompileInputs.cache
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\bin\Debug\net7.0\File.exe
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\bin\Debug\net7.0\File.deps.json
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\bin\Debug\net7.0\File.runtimeconfig.json
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\bin\Debug\net7.0\File.dll
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\bin\Debug\net7.0\File.pdb
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.dll
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\refint\File.dll
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.pdb
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\File.genruntimeconfig.cache
+C:\Users\programator\Source\Repos\CSharp_OOP_cv_GIT\File\obj\Debug\net7.0\ref\File.dll

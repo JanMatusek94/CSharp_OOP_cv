@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rozhrani", "Rozhrani\Rozhra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account", "Account\Account.csproj", "{8DE72804-DD1B-43E0-BBB0-DAFEB8E7DB81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{AEBA31C6-683A-484E-B111-660278138657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point", "Point\Point.csproj", "{AEBA31C6-683A-484E-B111-660278138657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{B1EA313E-9E86-4774-BC91-2C4676348D07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AEBA31C6-683A-484E-B111-660278138657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEBA31C6-683A-484E-B111-660278138657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEBA31C6-683A-484E-B111-660278138657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1EA313E-9E86-4774-BC91-2C4676348D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1EA313E-9E86-4774-BC91-2C4676348D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1EA313E-9E86-4774-BC91-2C4676348D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1EA313E-9E86-4774-BC91-2C4676348D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
