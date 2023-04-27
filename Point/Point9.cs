@@ -7,6 +7,9 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Point9 {
+  interface IPerimeter {
+    public double perimeter();
+  }
     class Point {
         public double x;
         public double y;
@@ -23,7 +26,7 @@ namespace Point9 {
         public Zapornahodnota(String s) : base(s) { }
     }
 
-    abstract class Shape {
+    abstract class Shape : IPerimeter {
         public Point center;
 
         public Shape(Point center) {
@@ -43,11 +46,11 @@ namespace Point9 {
         public virtual void writeInfo() {
             Console.WriteLine($"Střed: {center}");
         }
-        public abstract double perimeter();
-        public abstract double area();
+    public abstract double perimeter();
+		public abstract double area();
     }
 
-    class Circle : Shape {
+    class Circle : Shape, IPerimeter {
         public double r;
         public Circle(Point center, double r) : base(center) {
             if (r < 0) {
@@ -65,10 +68,10 @@ namespace Point9 {
             base.writeInfo();
             Console.WriteLine($"Kruh s poloměrem {r}, plochou {area()} a obvodem {perimeter()}\n");
         }
-        public override double perimeter() {
-            return Math.Round(2 * Math.PI * r, 2);
-        }
-        public override double area() {
+    public override double perimeter() {
+      return Math.Round(2 * Math.PI * r, 2);
+    }
+    public override double area() {
             return Math.PI * (r * r);
         }
     }
@@ -107,7 +110,7 @@ namespace Point9 {
         }
     }
 
-    class Person {
+    class Person : IPerimeter {
         private double a;
         private double b;
         public Person(double a, double b) {
@@ -120,10 +123,8 @@ namespace Point9 {
 
     class Cylinder : Circle {
         double height;
-        Point bod;
-        public Cylinder(Circle kruh, double height) : base(kruh.center.x, kruh.center.y, kruh.r) {
+        public Cylinder(Point center, double r, double height) : base(center, r) {
             this.height = height;
-            this.bod = kruh.center;
         }
         public double surface() {
             return (2 * base.area()) + (base.perimeter() * height);
@@ -132,7 +133,7 @@ namespace Point9 {
             return base.area() * height;
         }
         public override string ToString() {
-            return $"Cylindr s plochou {surface()} a objemem {volume()} a středem v bodě " + bod.ToString();
+            return $"Cylindr s plochou {surface()} a objemem {volume()} a středem v bodě " + center;
         }
     }
 
@@ -142,8 +143,8 @@ namespace Point9 {
             Point bod2 = new Point(4.694, 5.947);
             Circle kruh1 = new Circle();
             Rectangle rec1 = new Rectangle();
-            Circle kruh = new Circle(20, 19, 3);
-            Cylinder cylindr = new Cylinder(kruh, 20);
+            Circle kruh = new Circle(20, 18, 3);
+            Cylinder cylindr = new Cylinder(bod1, 2, 20);
             Console.WriteLine(cylindr);
         }
     }

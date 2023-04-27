@@ -121,11 +121,9 @@ namespace Point8 {
     class Cylinder {
         Circle bottom;
         double height;
-        Point bod;
         public Cylinder(Circle bottom, double height) {
             this.height = height;
             this.bottom = bottom;
-            this.bod = bottom.center;
         }
         public double surface() {
             return (2 * bottom.area()) + (bottom.perimeter() * height);
@@ -134,7 +132,7 @@ namespace Point8 {
             return bottom.area() * height;
         }
         public override string ToString() {
-            return $"Cylindr s plochou {surface()} a objemem {volume()} a středem v bodě " + bod.ToString();
+            return $"Cylindr s plochou {surface()} a objemem {volume()} a středem v bodě " + bottom.center;
         }
     }
 

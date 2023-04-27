@@ -7,13 +7,21 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Point7 {
+
+	interface IPerimeter {
+		double perimeter();
+	}
+
 	class Point {
-		public double x;
-		public double y;
+		private double x, y;
 		public Point(double x, double y) {
 			this.x = x;
 			this.y = y;
 		}
+
+		public double getX() { return x; }
+		public double getY() { return y; }
+		public void setX(double x) { this.x = x; }
 		public override string ToString() {
 			return $"({x:0.00}; {y:0.00})";
 		}
@@ -43,11 +51,10 @@ namespace Point7 {
 		public virtual void writeInfo() {
 			Console.WriteLine($"Střed: {center}");
 		}
-		public abstract double perimeter();
 		public abstract double area();
 	}
 
-	class Circle : Shape {
+	class Circle : Shape, IPerimeter {
 		public double r;
 		public Circle(Point center, double r) : base(center) {
 			if (r < 0) {
@@ -65,7 +72,7 @@ namespace Point7 {
 			base.writeInfo();
 			Console.WriteLine($"Kruh s poloměrem {r}, plochou {area()} a obvodem {perimeter()}\n");
 		}
-		public override double perimeter() {
+		public double perimeter() {
 			return Math.Round(2 * Math.PI * r, 2);
 		}
 		public override double area() {
@@ -73,7 +80,7 @@ namespace Point7 {
 		}
 	}
 
-	class Rectangle : Shape {
+	class Rectangle : Shape, IPerimeter {
 		//public Point center;
 		public int a;
 		public int b;
@@ -99,7 +106,7 @@ namespace Point7 {
 			if (a != b) { Console.WriteLine("Je to obdelnik. \n"); }   //rozlišení obdélníka od čtverce
 			else { Console.WriteLine("Je to ctverec. \n"); }
 		}
-		public override double perimeter() {
+		public double perimeter() {
 			return (2 * a) + (2 * b);
 		}
 		public override double area() {
@@ -107,7 +114,7 @@ namespace Point7 {
 		}
 	}
 
-	class Person {
+	class Person : IPerimeter {
 		private double a;
 		private double b;
 		public Person(double a, double b) {
@@ -170,45 +177,29 @@ namespace Point7 {
 			Person osoba1 = new Person(9, 5);
 			Person osoba2 = new Person(10, 6);
 
-			Object[] tvary = new Object[] { kruh1, kruh2, kruh3, kruh10, obd1, obd2, obd3, obd4, rec1, osoba2, osoba1};
+			IPerimeter[] tvary = new IPerimeter[] { kruh1, kruh2, kruh3, kruh10, obd1, obd2, obd3, obd4, rec1, osoba2, osoba1};
 			double soucetObvodu = 0;
 			double soucetObvodu2 = 0;
 			double soucetObvodu3 = 0;
 
 			for (int i = 0; i < tvary.Length; i++) {
-				if (tvary[i] is Shape) {
-					soucetObvodu += ((Shape)tvary[i]).perimeter();
-					Console.WriteLine(((Shape)tvary[i]).perimeter());
-				} else {
-					soucetObvodu += ((Person)tvary[i]).perimeter();
-					Console.WriteLine(((Person)tvary[i]).perimeter());
+					soucetObvodu += tvary[i].perimeter();
+					Console.WriteLine(tvary[i].perimeter());
 				}
-			}
 			Console.WriteLine("Součet obvodů všech kruhů, obdélníků a osob je " + soucetObvodu);
 
-			List<Object> tvaryList = new List<Object>() { kruh1, kruh2, kruh3, kruh10, obd1, obd2, obd3, obd4, rec1, osoba1, osoba2 };
+			List<IPerimeter> tvaryList = new List<IPerimeter>() { kruh1, kruh2, kruh3, kruh10, obd1, obd2, obd3, obd4, rec1, osoba1, osoba2 };
 
-			foreach (Object item in tvaryList) {
-				if (item is Shape) {
-					soucetObvodu2 += ((Shape)item).perimeter();
-					Console.WriteLine(((Shape)item).perimeter());
-				}
-				else {
-					soucetObvodu2 += ((Person)item).perimeter();
-					Console.WriteLine(((Person)item).perimeter());
-				}
+			foreach (IPerimeter item in tvaryList) {
+					soucetObvodu2 += item.perimeter();
+				Console.WriteLine(item.perimeter());
 			}
 			Console.WriteLine("Součet obvodů všech kruhů, obdélníků a osob z Listu je " + soucetObvodu2);
 
 			ArrayList tvaryArrayList = new ArrayList() { kruh1, kruh2, kruh3, kruh10, obd1, obd2, obd3, obd4, rec1, osoba1, osoba2 };
-			foreach (Object item in tvaryArrayList) {
-				if (item is Shape) {
-					soucetObvodu3 += ((Shape)item).perimeter();
-					Console.WriteLine(((Shape)item).perimeter());
-				} else {
-					soucetObvodu3 += ((Person)item).perimeter();
-					Console.WriteLine(((Person)item).perimeter());
-				}
+			foreach (IPerimeter item in tvaryArrayList) {
+					soucetObvodu3 += item.perimeter();
+					Console.WriteLine(item.perimeter());
 			}
 			Console.WriteLine("Součet obvodů všech kruhů, obdélníků a osob z ArrayListu je " + soucetObvodu3);
 		}

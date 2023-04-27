@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\File\\File.csproj": {}
+    "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\File\\File.csproj": {}
   },
   "projects": {
-    "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\File\\File.csproj": {
+    "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\File\\File.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\File\\File.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\File\\File.csproj",
         "projectName": "File",
-        "projectPath": "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\File\\File.csproj",
-        "packagesPath": "C:\\Users\\programator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\programator\\Source\\Repos\\CSharp_OOP_cv_GIT\\File\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\File\\File.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\source\\repos\\Csharp_OOP_cv\\File\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\programator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
