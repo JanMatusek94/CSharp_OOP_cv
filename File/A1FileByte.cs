@@ -14,21 +14,24 @@ namespace A1FileByte {
 			proZapis[1] = 12;
 			try {
 
-				FileStream fs = new FileStream(cesta, FileMode.Create);
+				using (FileStream fs = new FileStream(cesta, FileMode.Create)) {
 
 
-				if (File.Exists(cesta)) {
-					for (int i = 0; i < 2; i++) {
-						fs.WriteByte(proZapis[i]);
+					if (File.Exists(cesta)) {
+						for (int i = 0; i < 2; i++) {
+							fs.WriteByte(proZapis[i]);
+						}
+						fs.Seek(0, SeekOrigin.Begin);
+						dny = fs.ReadByte();
+						hodiny = fs.ReadByte();
+						fs.Close();
+						celkem = dny * 24 + hodiny;
+						Console.WriteLine("Celkem " + celkem.ToString());
+						
 					}
-					fs.Seek(0, SeekOrigin.Begin);
-					dny = fs.ReadByte();
-					hodiny = fs.ReadByte();
-					fs.Close();
-					celkem = dny * 24 + hodiny;
-					Console.WriteLine("Celkem " + celkem.ToString());
-				} else {
-					Console.WriteLine("Soubor neexistuje!");
+					else {
+						Console.WriteLine("Soubor neexistuje!");
+					}
 				}
 			}
 			catch (FileNotFoundException e) {
